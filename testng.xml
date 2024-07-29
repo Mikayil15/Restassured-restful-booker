@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/User/IdeaProjects/udemy_Rest">
+        <classes>
+            <class name="org.getpostcreateupdatedelete.CreateBookingTest">
+                <methods>
+                    <include name="createBookingTest"/>
+                </methods>
+            </class>
+            <class name="org.getpostcreateupdatedelete.DeleteBookingTest">
+                <methods>
+                    <include name="deleteBookingTest"/>
+                </methods>
+            </class>
+            <class name="org.getpostcreateupdatedelete.GetAllBookingTest">
+                <methods>
+                    <include name="gettAllBookingTest"/>
+                </methods>
+            </class>
+            <class name="org.getpostcreateupdatedelete.GetBookingByIdTest">
+                <methods>
+                    <include name="getBookingById"/>
+                </methods>
+            </class>
+            <class name="org.getpostcreateupdatedelete.PartialUpdateBookingTest">
+                <methods>
+                    <include name="PartialUpdateBookingTest"/>
+                </methods>
+            </class>
+            <class name="org.getpostcreateupdatedelete.UpdateBookingTest">
+                <methods>
+                    <include name="UpdateBookingTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
