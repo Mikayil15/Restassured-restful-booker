@@ -1,12 +1,30 @@
 package org.getpostcreateupdatedelete;
 
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
+import org.junit.jupiter.api.BeforeEach;
+
+import java.util.Arrays;
 
 import static io.restassured.RestAssured.given;
 
 public class BaseTest {
+
+    RequestSpecification spec;
+
+    @BeforeEach
+    public void setup(){
+         spec = new RequestSpecBuilder()
+                .setBaseUri("https://restful-booker.herokuapp.com")
+                .addFilters(Arrays.asList(new RequestLoggingFilter(), new ResponseLoggingFilter()))
+                .build();
+
+    }
 
     protected int createBookingId(){
 
@@ -15,12 +33,12 @@ public class BaseTest {
     }
 
     protected Response createBooking(){
-        Response response = given().
-                when().
-                contentType(ContentType.JSON).
+        Response response = given(spec)
+                .when()
+                .contentType(ContentType.JSON).
                 body(bookingObject("Tural","Hesenzade" ,657, false )).
-                post("https://restful-booker.herokuapp.com/booking");
-        response.prettyPrint();
+                post("/booking");
+
 
         response.then().statusCode(200);
     return response;
@@ -50,14 +68,13 @@ public class BaseTest {
         body.put("username", "admin");
         body.put("password", "password123");
 
-        Response response = given()
+        Response response = given(spec)
                 .contentType(ContentType.JSON)
                 .when()
                 .body(body.toString())
-                .log().all()
-                .post("https://restful-booker.herokuapp.com/auth");
+                .post("/auth");
 
-        response.prettyPrint();
+
 
         return response.getBody().jsonPath().getString("token");
 

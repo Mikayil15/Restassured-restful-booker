@@ -28,14 +28,14 @@ public class PartialUpdateBookingTest extends BaseTest {
         JSONObject body = new JSONObject();
         body.put("firstname", "XXXTTT");
 
-        Response response = given()
+        Response response = given(spec)
                 .contentType(ContentType.JSON)
                 .header("Cookie","token="+createToken())
                 .body(body.toString())
                 .when()
-                .patch("https://restful-booker.herokuapp.com/booking/"+ createBookingId());
+                .patch("/booking/"+ createBookingId());
 
-                response.prettyPrint();
+
 
 
         // Assertions

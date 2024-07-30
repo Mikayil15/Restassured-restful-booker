@@ -2,7 +2,7 @@ package org.getpostcreateupdatedelete;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.json.JSONObject;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -22,12 +22,13 @@ public class UpdateBookingTest extends BaseTest {
 
          //Step 3: Make Request
 
-        Response response = given()
+        Response response = given(spec)
                 .contentType(ContentType.JSON)
-                .header("Cookie", "token="+createToken())
+                .header("Cookie", "token="+ createToken())
                 .body(bookingObject("TestUpdatefn","TestIpdateLN" ,598, true ))
-                .put("https://restful-booker.herokuapp.com/booking/"+createBookingId());
-        response.prettyPrint();
+                .put("/booking/"+createBookingId());
+
+
 
         // Step 4: Assertion Test Yaz
 

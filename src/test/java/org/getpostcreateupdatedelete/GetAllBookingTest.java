@@ -4,17 +4,16 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GetAllBookingTest {
+public class GetAllBookingTest extends BaseTest {
 
 
     @Test
     public void gettAllBookingTest(){
 
-        given()
+        given(spec)
                 .when()
-                .get("https://restful-booker.herokuapp.com/booking")
+                .get("/booking")
                 .then()
-                .log().all()
                 .statusCode(200);
 
     }

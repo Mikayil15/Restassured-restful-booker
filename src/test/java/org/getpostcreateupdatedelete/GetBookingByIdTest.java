@@ -13,14 +13,14 @@ public class GetBookingByIdTest extends BaseTest {
 
 
 
-        Response response = given()
+        Response response = given(spec)
                 .when()
-                .get("https://restful-booker.herokuapp.com/booking/" +createBookingId());
+                .get("/booking/" +createBookingId());
         response
                 .then()
 
                 .statusCode(200);
-        response.prettyPrint();
+
 
        String firstname = response.jsonPath().getString("firstname");
        String totalprice = response.jsonPath().getString("totalprice");
