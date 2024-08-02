@@ -1,4 +1,4 @@
-package org.getpostcreateupdatedelete;
+package org.getpostcreateupdatedelete.tests;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;

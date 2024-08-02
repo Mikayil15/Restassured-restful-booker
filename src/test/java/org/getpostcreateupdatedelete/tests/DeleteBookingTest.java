@@ -1,13 +1,12 @@
-package org.getpostcreateupdatedelete;
+package org.getpostcreateupdatedelete.tests;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class DeleteBookingTest extends BaseTest{
+public class DeleteBookingTest extends BaseTest {
     @Test
     public void deleteBookingTest() {
 

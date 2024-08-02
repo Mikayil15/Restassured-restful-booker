@@ -1,4 +1,4 @@
-package org.getpostcreateupdatedelete;
+package org.getpostcreateupdatedelete.tests;
 
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
@@ -43,9 +43,6 @@ public class GetAllBookingTest extends BaseTest {
 
         List<Integer> filter = response.jsonPath().getList("bookingid");
         Assertions.assertTrue(filter.contains(bookingId));
-
-
-
 
     }
 }

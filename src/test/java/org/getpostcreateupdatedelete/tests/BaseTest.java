@@ -1,4 +1,4 @@
-package org.getpostcreateupdatedelete;
+package org.getpostcreateupdatedelete.tests;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;

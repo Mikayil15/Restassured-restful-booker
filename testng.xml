@@ -3,32 +3,32 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/User/IdeaProjects/udemy_Rest">
         <classes>
-            <class name="org.getpostcreateupdatedelete.CreateBookingTest">
+            <class name="org.getpostcreateupdatedelete.tests.CreateBookingTest">
                 <methods>
                     <include name="createBookingTest"/>
                 </methods>
             </class>
-            <class name="org.getpostcreateupdatedelete.DeleteBookingTest">
+            <class name="org.getpostcreateupdatedelete.tests.DeleteBookingTest">
                 <methods>
                     <include name="deleteBookingTest"/>
                 </methods>
             </class>
-            <class name="org.getpostcreateupdatedelete.GetAllBookingTest">
+            <class name="org.getpostcreateupdatedelete.tests.GetAllBookingTest">
                 <methods>
                     <include name="gettAllBookingTest"/>
                 </methods>
             </class>
-            <class name="org.getpostcreateupdatedelete.GetBookingByIdTest">
+            <class name="org.getpostcreateupdatedelete.tests.GetBookingByIdTest">
                 <methods>
                     <include name="getBookingById"/>
                 </methods>
             </class>
-            <class name="org.getpostcreateupdatedelete.PartialUpdateBookingTest">
+            <class name="org.getpostcreateupdatedelete.tests.PartialUpdateBookingTest">
                 <methods>
                     <include name="PartialUpdateBookingTest"/>
                 </methods>
             </class>
-            <class name="org.getpostcreateupdatedelete.UpdateBookingTest">
+            <class name="org.getpostcreateupdatedelete.tests.UpdateBookingTest">
                 <methods>
                     <include name="UpdateBookingTest"/>
                 </methods>
