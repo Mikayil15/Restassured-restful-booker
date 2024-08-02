@@ -19,7 +19,7 @@ public class CreateBookingTest extends BaseTest {
 
         Response response = createBooking();
 
-        Assertions.assertEquals("Tural", response.jsonPath().getJsonObject("booking.firstname"));
+        Assertions.assertEquals("Laman", response.jsonPath().getJsonObject("booking.firstname"));
 
 
 

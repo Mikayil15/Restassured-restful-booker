@@ -36,7 +36,7 @@ public class BaseTest {
         Response response = given(spec)
                 .when()
                 .contentType(ContentType.JSON).
-                body(bookingObject("Tural","Hesenzade" ,657, false )).
+                body(bookingObject("Laman","Samadov" ,657, false )).
                 post("/booking");
 
 
